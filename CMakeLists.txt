@@ -36,7 +36,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 
 enable_testing()
-add_executable(tests tests/test_logger.cpp)
+add_executable(tests tests/test_logger.cpp tests/test_ring_buffer.cpp)
 target_link_libraries(tests PRIVATE metrics GTest::gtest_main)
 include(GoogleTest)
 gtest_discover_tests(tests)
